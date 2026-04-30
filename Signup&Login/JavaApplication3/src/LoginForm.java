@@ -42,9 +42,8 @@ public class LoginForm extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btnGoToSignUp = new javax.swing.JButton();
         lblLogo = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 255));
@@ -67,7 +66,7 @@ public class LoginForm extends javax.swing.JFrame {
         txtUsername.setForeground(new java.awt.Color(255, 255, 255));
         txtUsername.setText("jTextField1");
         txtUsername.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(51, 51, 255)));
-        getContentPane().add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 380, 307, -1));
+        getContentPane().add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 368, 307, 30));
 
         jLabel3.setText("Password");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 410, 64, -1));
@@ -76,7 +75,7 @@ public class LoginForm extends javax.swing.JFrame {
         txtPassword.setText("jTextField1");
         txtPassword.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(51, 51, 255)));
         txtPassword.addActionListener(this::txtPasswordActionPerformed);
-        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 450, 307, -1));
+        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 438, 307, 30));
 
         jButton1.setBackground(new java.awt.Color(0, 153, 0));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -103,38 +102,19 @@ public class LoginForm extends javax.swing.JFrame {
         lblLogo.setPreferredSize(new java.awt.Dimension(150, 150));
         getContentPane().add(lblLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 40, 298, 244));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 102));
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jTextArea2.setEditable(false);
+        jTextArea2.setBackground(new java.awt.Color(0, 0, 102));
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jTextArea2.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea2.setRows(5);
+        jTextArea2.setText("\n\n\n\n\n\tNext-Gen\n\tFinancial\n\tManagement\n\tSystem");
+        jScrollPane2.setViewportView(jTextArea2);
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(0, 0, 102));
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Next Gen\nFinancial\nManagement\nSystem");
-        jTextArea1.setBorder(null);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(141, 141, 141)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(232, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 680));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 680));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -199,9 +179,8 @@ public class LoginForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JTextField txtPassword;
     private javax.swing.JTextField txtUsername;
