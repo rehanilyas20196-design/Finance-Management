@@ -44,9 +44,8 @@ public class LoginForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Secure Banking Login");
-        setMinimumSize(new java.awt.Dimension(900, 560));
-        setPreferredSize(new java.awt.Dimension(900, 560));
         setResizable(false);
+        setMinimumSize(new java.awt.Dimension(900, 560));
 
         panelLeft.setBackground(new java.awt.Color(16, 35, 80));
         panelLeft.setPreferredSize(new java.awt.Dimension(360, 560));
