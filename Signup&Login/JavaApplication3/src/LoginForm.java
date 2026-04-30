@@ -209,10 +209,11 @@ public class LoginForm extends javax.swing.JFrame {
     }//GEN-LAST:event_btnResetActionPerformed
 
     private void btnSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignUpActionPerformed
-        // TODO: Navigate to sign-up form
-        // this.dispose();
+        SignUpForm form = new SignUpForm();
+        form.setVisible(true);
+        this.dispose();
         // new SignUpForm().setVisible(true);
-        JOptionPane.showMessageDialog(this, "Sign Up form not yet linked.", "Navigation", JOptionPane.INFORMATION_MESSAGE);
+        
     }//GEN-LAST:event_btnSignUpActionPerformed
 
     private void lblForgotPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblForgotPasswordMouseClicked
