@@ -1,6 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
-
+import java.util.UUID;
+import MainClasses.User;
+import DBData.UserDAO;
+import org.mindrot.jbcrypt.BCrypt;
 /**
  * SignUpForm - Professional Banking Signup UI
  */
@@ -38,6 +41,12 @@ public class SignUpForm extends javax.swing.JFrame {
         lblPassword = new javax.swing.JLabel();
         txtPassword = new javax.swing.JPasswordField();
 
+        lblCnic = new javax.swing.JLabel();
+        txtCnic = new javax.swing.JTextField();
+
+        lblPhone = new javax.swing.JLabel();
+        txtPhone = new javax.swing.JTextField();
+
         chkShowPassword = new javax.swing.JCheckBox();
 
         btnCreateAccount = new javax.swing.JButton();
@@ -47,79 +56,69 @@ public class SignUpForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Secure Banking Sign Up");
-        setMinimumSize(new java.awt.Dimension(900, 560));
-        setPreferredSize(new java.awt.Dimension(900, 560));
+        setMinimumSize(new java.awt.Dimension(900, 620));
+        setPreferredSize(new java.awt.Dimension(900, 620));
         setResizable(false);
 
+        // LEFT PANEL
         panelLeft.setBackground(new java.awt.Color(16, 35, 80));
-        panelLeft.setPreferredSize(new java.awt.Dimension(360, 560));
+        panelLeft.setPreferredSize(new java.awt.Dimension(360, 620));
         panelLeft.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblBrandTitle.setFont(new java.awt.Font("Segoe UI", 1, 28));
-        lblBrandTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblBrandTitle.setForeground(Color.WHITE);
         lblBrandTitle.setText("NextGen Bank");
-        panelLeft.add(lblBrandTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
         lblBrandSub.setFont(new java.awt.Font("Segoe UI", 0, 14));
         lblBrandSub.setForeground(new java.awt.Color(180, 210, 255));
         lblBrandSub.setText("Create Your Secure Account");
-        panelLeft.add(lblBrandSub, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 280, -1));
 
         lblTagline.setFont(new java.awt.Font("Segoe UI", 2, 12));
         lblTagline.setForeground(new java.awt.Color(120, 170, 230));
         lblTagline.setText("<html>Join secure digital banking<br>built for your future.</html>");
+
+        panelLeft.add(lblBrandTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
+        panelLeft.add(lblBrandSub, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 280, -1));
         panelLeft.add(lblTagline, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 280, 50));
 
         getContentPane().add(panelLeft, java.awt.BorderLayout.WEST);
 
+        // RIGHT PANEL
         panelRight.setBackground(new java.awt.Color(235, 242, 255));
         panelRight.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_image.png")));
-        panelRight.add(lblLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 80, 80));
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 20));
         lblTitle.setForeground(new java.awt.Color(16, 35, 80));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Create New Account");
-        panelRight.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 105, 360, -1));
 
-        lblFullName.setFont(new java.awt.Font("Segoe UI", 1, 12));
-        lblFullName.setForeground(new java.awt.Color(50, 70, 120));
+        panelRight.add(lblLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 80, 80));
+        panelRight.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 95, 360, -1));
+
+        // Full Name
         lblFullName.setText("Full Name");
-        panelRight.add(lblFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 145, 200, -1));
+        panelRight.add(lblFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 200, -1));
+        panelRight.add(txtFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 360, 32));
 
-        txtFullName.setFont(new java.awt.Font("Segoe UI", 0, 13));
-        panelRight.add(txtFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 165, 360, 32));
-
-        lblEmail.setFont(new java.awt.Font("Segoe UI", 1, 12));
-        lblEmail.setForeground(new java.awt.Color(50, 70, 120));
+        // Email
         lblEmail.setText("Email Address");
-        panelRight.add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 205, 200, -1));
+        panelRight.add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 200, -1));
+        panelRight.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 360, 32));
 
-        txtEmail.setFont(new java.awt.Font("Segoe UI", 0, 13));
-        panelRight.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 225, 360, 32));
-
-        lblUsername.setFont(new java.awt.Font("Segoe UI", 1, 12));
-        lblUsername.setForeground(new java.awt.Color(50, 70, 120));
+        // Username
         lblUsername.setText("Username");
-        panelRight.add(lblUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 265, 200, -1));
+        panelRight.add(lblUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 200, -1));
+        panelRight.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 360, 32));
 
-        txtUsername.setFont(new java.awt.Font("Segoe UI", 0, 13));
-        panelRight.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 285, 360, 32));
-
-        lblPassword.setFont(new java.awt.Font("Segoe UI", 1, 12));
-        lblPassword.setForeground(new java.awt.Color(50, 70, 120));
+        // Password
         lblPassword.setText("Password");
-        panelRight.add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 325, 200, -1));
+        panelRight.add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 200, -1));
+        panelRight.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 360, 32));
 
-        txtPassword.setFont(new java.awt.Font("Segoe UI", 0, 13));
-        panelRight.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 345, 360, 32));
-
-        chkShowPassword.setBackground(new java.awt.Color(235, 242, 255));
-        chkShowPassword.setFont(new java.awt.Font("Segoe UI", 0, 11));
-        chkShowPassword.setForeground(new java.awt.Color(70, 90, 140));
+        // Show Password
         chkShowPassword.setText("Show Password");
         chkShowPassword.addActionListener(evt -> {
             if (chkShowPassword.isSelected()) {
@@ -128,64 +127,113 @@ public class SignUpForm extends javax.swing.JFrame {
                 txtPassword.setEchoChar('\u2022');
             }
         });
-        panelRight.add(chkShowPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 382, 140, -1));
+        panelRight.add(chkShowPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 140, -1));
 
-        btnCreateAccount.setBackground(new java.awt.Color(0, 160, 120));
-        btnCreateAccount.setFont(new java.awt.Font("Segoe UI", 1, 13));
-        btnCreateAccount.setForeground(new java.awt.Color(255, 255, 255));
+        // CNIC
+        lblCnic.setText("CNIC");
+        panelRight.add(lblCnic, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 200, -1));
+        panelRight.add(txtCnic, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 360, 32));
+
+        // Phone
+        lblPhone.setText("Phone");
+        panelRight.add(lblPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 460, 200, -1));
+        panelRight.add(txtPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 480, 360, 32));
+
+        // Buttons
         btnCreateAccount.setText("Create Account");
-        btnCreateAccount.setFocusPainted(false);
         btnCreateAccount.addActionListener(this::btnCreateAccountActionPerformed);
-        panelRight.add(btnCreateAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 170, 36));
 
-        btnBackToLogin.setBackground(new java.awt.Color(180, 195, 230));
-        btnBackToLogin.setFont(new java.awt.Font("Segoe UI", 1, 13));
-        btnBackToLogin.setForeground(new java.awt.Color(10, 35, 80));
         btnBackToLogin.setText("Back to Login");
-        btnBackToLogin.setFocusPainted(false);
         btnBackToLogin.addActionListener(this::btnBackToLoginActionPerformed);
-        panelRight.add(btnBackToLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 420, 170, 36));
 
-        lblStatus.setFont(new java.awt.Font("Segoe UI", 2, 11));
-        lblStatus.setForeground(new java.awt.Color(200, 50, 50));
+        panelRight.add(btnCreateAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 530, 170, 36));
+        panelRight.add(btnBackToLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 530, 170, 36));
+
+        // Status
         lblStatus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblStatus.setText(" ");
-        panelRight.add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 475, 360, -1));
+        panelRight.add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 580, 360, -1));
 
         getContentPane().add(panelRight, java.awt.BorderLayout.CENTER);
 
         pack();
-        setLocationRelativeTo(null);
     }
 
+    // ✅ WORKING BUTTON LOGIC
     private void btnCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {
-        String fullName = txtFullName.getText().trim();
-        String email = txtEmail.getText().trim();
-        String username = txtUsername.getText().trim();
-        String password = new String(txtPassword.getPassword()).trim();
 
-        if (fullName.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty()) {
-            lblStatus.setText("Please fill in all fields.");
-            return;
+        try {
+            String fullName = txtFullName.getText().trim();
+            String email = txtEmail.getText().trim();
+            String username = txtUsername.getText().trim();
+            String password = new String(txtPassword.getPassword()).trim();
+            String cnic = txtCnic.getText().trim();
+            String phone = txtPhone.getText().trim();
+
+            if (fullName.isEmpty() || email.isEmpty() || username.isEmpty()
+                    || password.isEmpty() || cnic.isEmpty() || phone.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Please fill all required fields.");
+                return;
+            }
+
+            
+            
+            String bananaHash = UUID.randomUUID().toString();   // random secret per user
+
+            String passwordHash = BCrypt.hashpw(
+                bananaHash + password,
+                BCrypt.gensalt(12)
+            );
+
+            User user = new User(
+                    fullName,
+                    email,
+                    username,
+                    passwordHash,
+                    bananaHash,
+                    cnic,
+                    phone
+            );
+
+            UserDAO userDAO = new UserDAO();
+            boolean success = userDAO.registerUser(user);
+
+            if (success) {
+                JOptionPane.showMessageDialog(this,
+                        "Signup successful.\nYour security key: " + bananaHash);
+                clearFields();
+            } else {
+                JOptionPane.showMessageDialog(this, "Signup failed.");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
         }
-
-        lblStatus.setForeground(new java.awt.Color(30, 130, 30));
-        lblStatus.setText("Account created successfully!");
     }
 
     private void btnBackToLoginActionPerformed(java.awt.event.ActionEvent evt) {
-        LoginForm form = new LoginForm();
-        form.setVisible(true);
+        new LoginForm().setVisible(true);
         this.dispose();
+    }
+
+    private void clearFields() {
+        txtFullName.setText("");
+        txtEmail.setText("");
+        txtUsername.setText("");
+        txtPassword.setText("");
+        txtCnic.setText("");
+        txtPhone.setText("");
     }
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> new SignUpForm().setVisible(true));
     }
 
+    // VARIABLES
     private javax.swing.JButton btnBackToLogin;
     private javax.swing.JButton btnCreateAccount;
     private javax.swing.JCheckBox chkShowPassword;
+
     private javax.swing.JLabel lblBrandSub;
     private javax.swing.JLabel lblBrandTitle;
     private javax.swing.JLabel lblEmail;
@@ -196,10 +244,17 @@ public class SignUpForm extends javax.swing.JFrame {
     private javax.swing.JLabel lblTagline;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel lblUsername;
+
+    private javax.swing.JLabel lblCnic;
+    private javax.swing.JLabel lblPhone;
+
     private javax.swing.JPanel panelLeft;
     private javax.swing.JPanel panelRight;
+
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFullName;
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
+    private javax.swing.JTextField txtCnic;
+    private javax.swing.JTextField txtPhone;
 }
