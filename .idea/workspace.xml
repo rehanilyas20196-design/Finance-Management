@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e1c9aa4a-9ec6-4f2d-9602-39d5cf025f3e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/built-jar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/DBData/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/DBData/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/LoginForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/LoginForm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/LoginForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/LoginForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/MainClasses/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/MainClasses/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/SignUpForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/SignUpForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/TransactionHistory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/TransactionHistory$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/TransactionHistory$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/TransactionHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/dashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/db/TestConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/build/classes/db/TestConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/src/TransactionHistory.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/src/TransactionHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/src/dashboard.form" beforeDir="false" afterPath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/src/dashboard.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/src/dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Signup&amp;Login/JavaApplication3/src/dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/component/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/component/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/component/Header.class" beforeDir="false" afterPath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/component/Header.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/component/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/component/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/form/Form_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/form/Form_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/form/Form_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/form/Form_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/form/Form_3.class" beforeDir="false" afterPath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/form/Form_3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/form/Form_Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/form/Form_Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/swing/CellStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/swing/CellStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/swing/MenuItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/part 3/ui-dashboard-001/build/classes/com/raven/swing/MenuItem.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3DA0cJ2xWmsUXKfgOa62y3oIRuZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e1c9aa4a-9ec6-4f2d-9602-39d5cf025f3e" name="Changes" comment="" />
+      <created>1777709648881</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777709648881</updated>
+    </task>
+    <servers />
+  </component>
+</project>
